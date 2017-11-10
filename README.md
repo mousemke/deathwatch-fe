@@ -54,7 +54,7 @@ available scripts:
 | `test:visual:cli` | runs visual regression tests |
 
 #### you can run script from the docker container is already running by doing either of these:
-+ login to container with `docker-compose exec testable-reations bash` and the run scripts from within container with `npm run --silent <script>`
++ login to container with `docker-compose exec deathwatch-fe bash` and the run scripts from within container with `npm run --silent <script>`
 + run any script directly via `docker-compose exec deathwatch-fe npm run --silent <script>`.
 
 

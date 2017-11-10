@@ -1,7 +1,7 @@
 # compose file versions evolve with new docker versions, see compatibility matrix
 # https://docs.docker.com/compose/compose-file/compose-versioning/#compatibility-matrix
 # On Dev machines, we use the latest docker version, however on servers
-# we stick to fixed, older versions. We still use Docker v1.11 on servers, that leaves us with 
+# we stick to fixed, older versions. We still use Docker v1.11 on servers, that leaves us with
 # docker-compose version 2
 version: '2'
 
@@ -9,7 +9,7 @@ services:
 
   # service name convention: Same as github repo. If there are multiple services in one repo, naming
   # is <repo>-<name>
-  testable-reactions:
+  deathwatch-fe:
 
     # how to build the docker image
     build:
@@ -17,9 +17,9 @@ services:
       context: .
       dockerfile: docker/Dockerfile
 
-    # name of the created image. Convention is same name as service, with tag local-latest to 
+    # name of the created image. Convention is same name as service, with tag local-latest to
     # distinguish from other builds like stage-latest or prod-latest
-    image: testable-reactions:local-latest
+    image: deathwatch-fe:local-latest
 
     # maps port from the container (second number) to this machine host (first number). The container port is can be
     # anything the service wants, but the host port has several limitions in for deployment. See README.md. Services

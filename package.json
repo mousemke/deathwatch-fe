@@ -1,11 +1,10 @@
 {
-  "name": "testable-reactions",
-  "description": "A fully testable react/webpack project boilerplate",
-  "private": true,
+  "name": "deathwatch-fe",
+  "description": "a front end to consume an api https://github.com/remigiilli/dw",
   "main": "src/index.js",
-  "version": "0.1.5",
+  "version": "0.0.1",
   "engines": {
-    "node": ">=7.3.0"
+    "node": ">=8.4.0"
   },
   "scripts": {
     "build": "PRODUCTION=true ./node_modules/.bin/webpack",

@@ -63,7 +63,7 @@ Contributing
 
 This project adheres to the [Contributor Covenant](http://contributor-covenant.org/). By participating, you are expected to honor this code.
 
-[Testable-Reactions - Code of Conduct](https://github.com/mousemke/deathwatch-fe/blob/master/CODE_OF_CONDUCT.md)
+[Deathwatch - Front End - Code of Conduct](https://github.com/mousemke/deathwatch-fe/blob/master/CODE_OF_CONDUCT.md)
 
 
 Issues

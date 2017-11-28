@@ -100,7 +100,6 @@
     "test:lint",
     "test:style",
     "test:unit",
-    "test:type",
-    "test:visual"
+    "test:type"
   ]
 }

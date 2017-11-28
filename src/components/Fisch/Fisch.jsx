@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 
-import styles from './Fish.css';
+import styles from './Fisch.css';
 
 /**
  * ## Fish

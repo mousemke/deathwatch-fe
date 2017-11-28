@@ -1,6 +1,9 @@
 // @flow
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
+import Dropdown from '../Dropdown/Dropdown.jsx';
+import Input from '../Input/Input.jsx';
 import styles from './PageHeader.css';
 
 type Props = {
@@ -22,14 +25,20 @@ class Pageheader extends Component<Props> {
   /**
      * ## render
      *
-     * renders the header
+     * renders the header with search
      *
      * @return {JSX} compiled jsx
      */
   render() {
     return (
-      <div className={styles.pageHeaderWrapper}>
-        Hello {this.props.name}, This app seems to be working! Or is it ....
+      <div className={styles.wrapper}>
+        <div className={styles.container}>
+          <Link to="/" className={styles.homeButton}>
+            Home
+          </Link>
+          <Input placeholder={'Search'} />
+          <Dropdown />
+        </div>
       </div>
     );
   }

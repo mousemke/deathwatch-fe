@@ -3,8 +3,8 @@ import assert from 'assert';
 import React from 'react';
 import { Route } from 'react-router-dom';
 import App from '../../src/components/App.jsx';
-import Fish from '../../src/components/fish/Fish.jsx';
-import FourOhFour from '../../src/components/fourOhFour/FourOhFour.jsx';
+import Home from '../../src/components/Home/Home.jsx';
+import FourOhFour from '../../src/components/FourOhFour/FourOhFour.jsx';
 
 import { shallow } from 'enzyme';
 
@@ -22,7 +22,7 @@ describe('The App component', () => {
       return pathMap;
     }, {});
 
-    assert.deepEqual(pathMap['/'], Fish);
+    assert.deepEqual(pathMap['/'], Home);
     assert.deepEqual(pathMap['*'], FourOhFour);
   });
 });

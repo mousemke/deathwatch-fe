@@ -37,14 +37,14 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new UglifyJSPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Where is the fisch?'
+      title: 'Deathwatch Info Somthing Something'
     }),
   ] : [
     new CleanWebpackPlugin(['dist']),
     new CaseSensitivePathsPlugin(),
     new WatchMissingNodeModulesPlugin('./node_modules/'),
     new HtmlWebpackPlugin({
-      title: 'Where is the fisch?'
+      title: 'Deathwatch Info Somthing Something'
     }),
     new webpack.NamedModulesPlugin(),
   ],

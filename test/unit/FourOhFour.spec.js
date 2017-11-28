@@ -1,7 +1,7 @@
 // @flow
 import assert from 'assert';
 import React from 'react';
-import FourOhFour from '../../src/components/fourOhFour/FourOhFour.jsx';
+import FourOhFour from '../../src/components/FourOhFour/FourOhFour.jsx';
 
 import { shallow } from 'enzyme';
 

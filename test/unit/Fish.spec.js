@@ -1,8 +1,8 @@
 // @flow
 import assert from 'assert';
 import React from 'react';
-import Fish from '../../src/components/fish/Fish.jsx';
-import styles from '../../src/components/fish/Fish.css';
+import Fish from '../../src/components/Fisch/Fisch.jsx';
+import styles from '../../src/components/Fisch/Fisch.css';
 
 import { shallow, mount } from 'enzyme';
 

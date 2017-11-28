@@ -1,0 +1,17 @@
+
+.dropdown
+{
+    border:                 1px solid transparent;
+    color:                  #777;
+    cursor:                 pointer;
+    float:                  right;
+    font-size:              18px;
+    height:                 30px;
+    line-height:            32px;
+    margin-right:           15px;
+}
+
+.dropdown:hover
+{
+    border-color:           #a44;
+}

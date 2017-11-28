@@ -1,9 +1,10 @@
 // @flow
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Pageheader from './pageHeader/PageHeader.jsx';
-import Fish from './fish/Fish.jsx';
-import FourOhFour from './fourOhFour/FourOhFour.jsx';
+import Pageheader from './PageHeader/PageHeader.jsx';
+import Fisch from './Fisch/Fisch.jsx';
+import FourOhFour from './FourOhFour/FourOhFour.jsx';
+import Home from './Home/Home.jsx';
 
 import styles from './App.css';
 
@@ -30,17 +31,16 @@ class App extends Component<Props> {
      */
   render() {
     return (
-      <div className={styles.AppWrapper}>
-        <BrowserRouter>
-          <div>
-            <Pageheader name={this.props.name} />
-            <Switch>
-              <Route path="/" exact component={Fish} />
-              <Route path="*" component={FourOhFour} />
-            </Switch>
-          </div>
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <div className={styles.AppWrapper}>
+          <Pageheader name={this.props.name} />
+          <Switch>
+            <Route path="/" component={Home} />
+            <Route path="*" component={FourOhFour} />
+          </Switch>
+          <Fisch />
+        </div>
+      </BrowserRouter>
     );
   }
 }

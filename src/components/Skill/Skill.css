@@ -1,0 +1,72 @@
+
+.skill
+{
+  position: relative;
+  color:  #004;
+  border: 1px solid #337ab711;
+  padding: 10px 20px;
+  cursor: pointer;
+  transform: scale(1, 1);
+  background: #fff;
+  z-index: 0;
+  transition: border-color 200ms ease-in,
+              transform 200ms ease-in;
+}
+
+.skill:hover
+{
+  z-index: 1;
+  transform: scale(1.005, 1.005);
+  border-color: #337ab788
+}
+
+.titleRow
+{
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.name
+{
+  font-size: 1.5em;
+  line-height: 1.7em;
+  font-weight: 500;
+  color: #337ab7;
+}
+
+.attribute
+{
+  margin-left: 10px;
+}
+
+.timestamp
+{
+  float: right;
+  margin-top: -30px;
+  color: #004;
+  font-size: 0.6em;
+  line-height: 1.7em;
+}
+
+.skill.expanded .timestamp
+{
+  width: 100%;
+  text-align: right;
+  float: none;
+  margin-top: 0;
+}
+
+.details
+{
+  transform-origin: top;
+  transition: max-height 200ms ease-in;
+  max-height: 0;
+  opacity: 0;
+}
+
+.skill.expanded .details
+{
+  opacity: 1;
+  max-height: 8000px;
+}
+

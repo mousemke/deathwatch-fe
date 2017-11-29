@@ -21,7 +21,7 @@ export default class Home extends Component<any> {
    */
   render() {
     return (
-      <ContentContainer title={'Dashboard'}>
+      <ContentContainer title={'Home'}>
         <div className="panel panel-default">
           <div className="panel-body">
             <h2>

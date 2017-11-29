@@ -25,6 +25,7 @@ export default class ContentContainer extends Component<any> {
         <div className={styles.header}>
           <div className={styles.headerText}>{title}</div>
         </div>
+        {this.props.children}
       </div>
     );
   }

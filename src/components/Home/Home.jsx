@@ -19,6 +19,10 @@ export default class Home extends Component<any> {
    * @return {JSX} compiled jsx
    */
   render() {
-    return <ContentContainer title={'Home'} />;
+    return (
+      <ContentContainer title={'Home'}>
+        <div className="test" />
+      </ContentContainer>
+    );
   }
 }

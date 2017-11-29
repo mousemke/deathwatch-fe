@@ -37,7 +37,7 @@ class Pageheader extends Component<Props> {
             Home
           </Link>
           <Input placeholder={'Search'} />
-          <Dropdown />
+          <Dropdown className={styles.navigationDropdown} />
         </div>
       </div>
     );

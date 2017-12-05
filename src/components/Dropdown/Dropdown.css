@@ -7,9 +7,10 @@
     font-size:              18px;
     height:                 30px;
     line-height:            32px;
+    min-width:              100px;
 }
 
 .dropdown:hover
 {
-    border-color:           #a44;
+    border-color:           #337ab7;
 }

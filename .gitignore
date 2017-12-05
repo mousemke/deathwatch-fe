@@ -1,7 +1,4 @@
-# git ignore files
-# https://git-scm.com/docs/gitignore
 
-# filesystem
 .AppleDouble
 .DS_Store
 .Spotlight-V100
@@ -9,15 +6,12 @@
 Desktop.ini
 Thumbs.db
 $RECYCLE.BIN/
-
-# editors
 .idea
 .project
 *.sublime-*
-
-# project
 node_modules/
 npm-debug.log
 dist/**
 coverage/
 niffy/
+config.json

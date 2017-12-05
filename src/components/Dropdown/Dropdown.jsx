@@ -20,14 +20,20 @@ export default class Dropdown extends Component<any> {
    * @return {JSX} compiled jsx
    */
   render() {
-    const { className } = this.props;
+    const { className, options } = this.props;
 
     return (
       <select
         ref={el => (this.dropdown = el)}
         className={`${styles.dropdown} ${className || ''}`}
       >
-        <option value="">moon?</option>
+        {options.map((opt, i) => {
+          return (
+            <option key={i} value={opt.value}>
+              {opt.label}
+            </option>
+          );
+        })}
       </select>
     );
   }

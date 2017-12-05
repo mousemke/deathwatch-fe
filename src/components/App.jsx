@@ -5,6 +5,7 @@ import Pageheader from './PageHeader/PageHeader.jsx';
 import Fisch from './Fisch/Fisch.jsx';
 import FourOhFour from './FourOhFour/FourOhFour.jsx';
 import Home from './Home/Home.jsx';
+import Skills from './Skills/Skills.jsx';
 
 import styles from './App.css';
 
@@ -35,7 +36,8 @@ class App extends Component<Props> {
         <div className={styles.AppWrapper}>
           <Pageheader name={this.props.name} />
           <Switch>
-            <Route path="/" component={Home} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/skills/" component={Skills} />
             <Route path="*" component={FourOhFour} />
           </Switch>
           <Fisch />

@@ -56,7 +56,7 @@ export default class Skill extends Component<Props, State> {
     let longName = name;
 
     if (skillGroups && skillGroup) {
-      longName = `${skillGroup.name} :${longName}`;
+      longName = `${skillGroup.name}: ${longName}`;
     }
 
     return (

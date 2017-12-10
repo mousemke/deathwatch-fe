@@ -1,6 +1,7 @@
 
 .skill
 {
+    width: 100%;
     background: #fff;
     border: 1px solid #337ab711;
     color:  #004;
@@ -19,8 +20,8 @@
 
 .titleRow
 {
-    margin-top: 10px;
     margin-bottom: 10px;
+    margin-top: 10px;
     width: 100%;
 }
 

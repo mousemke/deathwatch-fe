@@ -1,11 +1,12 @@
 // @flow
+
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Pageheader from './PageHeader/PageHeader.jsx';
 import Fisch from './Fisch/Fisch.jsx';
 import FourOhFour from './FourOhFour/FourOhFour.jsx';
-import Home from './Home/Home.jsx';
-import Skills from './Skills/Skills.jsx';
+import Home from '../pages//Home/Home.jsx';
+import Skills from '../pages/Skills/Skills.jsx';
 
 import styles from './App.css';
 

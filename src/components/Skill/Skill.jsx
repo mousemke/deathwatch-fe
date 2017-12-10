@@ -4,20 +4,36 @@ import attributes from '../../constants/attributes.constants.js';
 
 import styles from './Skill.css';
 
+type Props = {
+  data: {
+    id: string,
+    name: string,
+    attribute: string,
+    description: string,
+    use: string,
+    special: string,
+    group_id: string,
+  },
+  skillGroups: Array<{ name: string }>,
+};
+
+type State = {
+  expanded: boolean,
+};
+
 /**
  * ## Skill
  *
  * cotains a skill and events
  */
-export default class Skill extends Component<any> {
+export default class Skill extends Component<Props, State> {
   state = {
-    expanded : false,
+    expanded: false,
   };
 
-  expand = () =>
-  {
-    this.setState({expanded: !this.state.expanded});
-  }
+  expand = () => {
+    this.setState({ expanded: !this.state.expanded });
+  };
 
   /**
    * ## render
@@ -26,49 +42,45 @@ export default class Skill extends Component<any> {
    *
    * @return {JSX} compiled jsx
    */
-  render()
-  {
-    const {
-      id,
-      name,
-      attribute,
-      description,
-      updated_at,
-      use,
-      special,
-    } = this.props.data;
+  render() {
+    const { skillGroups = [], data } = this.props;
 
-    const {
-      expanded
-    } = this.state;
+    const { id, name, attribute, description, use, special } = data;
+
+    // eslint-disable-next-line camelcase
+    const groupId = parseInt(data.group_id);
+
+    const { expanded } = this.state;
+
+    const skillGroup = skillGroups[groupId - 1];
+    let longName = name;
+
+    if (skillGroups && skillGroup) {
+      longName = `${skillGroup.name} :${longName}`;
+    }
 
     return (
-      <div
+      <button
         data-id={id}
-        className={`${styles.skill} ${expanded ? styles.expanded : styles.collapsed}`}
+        className={`${styles.skill} ${expanded ? styles.expanded : ''}`}
         onClick={this.expand}
       >
         <div className={styles.titleRow}>
-          <span className={styles.name}>
-          {
-            name
-          }
-          </span>
+          <span>{longName}</span>
           <span className={styles.attribute}>
-          {
-            `(${attributes[attribute]})`
-          }
+            {`(${attributes[attribute]})`}
           </span>
         </div>
-        <div className={`${styles.details}`}>
-          <div>{description}</div>
-          <div>Skill Use: {use}</div>
-          <div>Special Uses: {special}</div>
+        <div className={styles.details}>
+          {description ? (
+            <div className={styles.details}>{description}</div>
+          ) : null}
+          {use ? <div className={styles.details}>Skill Use: {use}</div> : null}
+          {special ? (
+            <div className={styles.details}>Special Uses: {special}</div>
+          ) : null}
         </div>
-        <div className={styles.timestamp}>
-          Last modified: {updated_at}
-        </div>
-      </div>
+      </button>
     );
   }
 }

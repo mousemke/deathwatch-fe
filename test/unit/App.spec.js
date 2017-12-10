@@ -3,7 +3,7 @@ import assert from 'assert';
 import React from 'react';
 import { Route } from 'react-router-dom';
 import App from '../../src/components/App.jsx';
-import Home from '../../src/components/Home/Home.jsx';
+import Home from '../../src/pages/Home/Home.jsx';
 import FourOhFour from '../../src/components/FourOhFour/FourOhFour.jsx';
 
 import { shallow } from 'enzyme';

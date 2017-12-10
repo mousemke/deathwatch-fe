@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import ContentContainer from '../ContentContainer/ContentContainer.jsx';
+import ContentContainer from '../../components/ContentContainer/ContentContainer.jsx';
 // import styles from './Home.css';
 
 /**
@@ -21,7 +21,7 @@ export default class Home extends Component<any> {
    */
   render() {
     return (
-      <ContentContainer title={'Home'}>
+      <ContentContainer title={'Dashboard'}>
         <div className="panel panel-default">
           <div className="panel-body">
             <h2>

@@ -80,6 +80,7 @@ module.exports = {
                   modules: true,
                   minimize: true,
                   sourceMap: true,
+                  localIdentName: '[name]__[local]___[hash:base64:5]',
                  } : {
                   importLoaders: 1,
                   modules: true,

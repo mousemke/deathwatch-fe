@@ -1,72 +1,72 @@
 
 .skill
 {
-  position: relative;
-  color:  #004;
-  border: 1px solid #337ab711;
-  padding: 10px 20px;
-  cursor: pointer;
-  transform: scale(1, 1);
-  background: #fff;
-  z-index: 0;
-  transition: border-color 200ms ease-in,
-              transform 200ms ease-in;
+    background: #fff;
+    border: 1px solid #337ab711;
+    color:  #004;
+    cursor: pointer;
+    outline: none;
+    padding: 10px 20px;
+    position: relative;
+    text-align: left;
+    transition: border-color 200ms ease-in;
 }
 
 .skill:hover
 {
-  z-index: 1;
-  transform: scale(1.005, 1.005);
-  border-color: #337ab788
+    border-color: #337ab788;
 }
 
 .titleRow
 {
-  margin-bottom: 10px;
-  width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
 .name
 {
-  font-size: 1.5em;
-  line-height: 1.7em;
-  font-weight: 500;
-  color: #337ab7;
+    color: #337ab7;
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1.7em;
 }
 
 .attribute
 {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 .timestamp
 {
-  float: right;
-  margin-top: -30px;
-  color: #004;
-  font-size: 0.6em;
-  line-height: 1.7em;
+    color: #004;
+    float: right;
+    font-size: 0.6em;
+    line-height: 1.7em;
+    margin-top: -30px;
 }
 
-.skill.expanded .timestamp
+.expanded .timestamp
 {
-  width: 100%;
-  text-align: right;
-  float: none;
-  margin-top: 0;
+    float: none;
+    margin-top: 0;
+    text-align: right;
+    width: 100%;
 }
 
 .details
 {
-  transform-origin: top;
-  transition: max-height 200ms ease-in;
-  max-height: 0;
-  opacity: 0;
+    max-height: 0;
+    opacity: 0;
+    transform-origin: top;
+    transition: opacity 200ms ease-in,
+        max-height 100ms ease-in;
 }
 
-.skill.expanded .details
+.expanded .details
 {
-  opacity: 1;
-  max-height: 8000px;
+    max-height: 8000px;
+    opacity: 1;
+    transition: opacity 100ms ease-in;
 }
 

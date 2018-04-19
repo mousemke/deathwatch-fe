@@ -38,6 +38,11 @@
     text-decoration:        none;
 }
 
+.content a:hover
+{
+    text-decoration:        initial;
+}
+
 .content h2
 {
     color:                  inherit;
